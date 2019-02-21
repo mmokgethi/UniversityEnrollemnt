@@ -50,7 +50,19 @@ public class Course
 	
 	public boolean enrollStudent(Student s) 
 	{
-		//
+		if(this.students.size() < this.capacity)
+		{
+			if (this.students.add(s))
+			{
+				return true;
+			}else
+			{
+				return false;
+			}
+		}else
+		{
+			return false;
+		}
 	}
 	
 	public boolean unenrollStudent(Student s) 
@@ -63,5 +75,5 @@ public class Course
 			return false;
 		}
 	}
-	
+
 }
